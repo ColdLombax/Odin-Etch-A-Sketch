@@ -1,18 +1,19 @@
-// Create an element with class of grid-layout
-// change the styling to css grid check whether it's scaleable?
-const container = document.querySelector('.container');
+const gridContainer = document.querySelector('#grid-container');
 
-function createGrid (gridAmount) {
-    let gridArea = gridAmount * gridAmount;
-    for(let i = 0; i <= gridArea; i++) 
-    {
+function createGrid(gridSize) {
+    gridArea = gridSize * gridSize;
+    gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`
+    gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`
+    for(i = 0; i <= gridArea; i++) {
         let gridItem = document.createElement('div');
-        gridItem.classList.add('item-element');
-        container.style.gridTemplateColumns = `repeat(${gridAmount}, 1fr)`
-        container.style.gridTemplateRows = `repeat(${gridAmount}, 1fr)`   
-        container.insertAdjacentElement('beforeend', gridAmount);
-        // This will probably need reworking again, elements aren't being created
-    } 
+        gridItem.classList.add('grid-item');
+        gridItem.addEventListener('mouseover', onHoverEffect());
+        gridContainer.appendChild(gridItem);
+    }
 }
 
-createGrid(10);
+createGrid(16);
+
+function onHoverEffect() {
+    
+}
