@@ -11,11 +11,13 @@
 <body>
     <div id="container-wrapper">
         <div id="grid-container" class="grid"></div>
-        <div id="button-container">
-            <p id="default" class="btn">Default</p>
-            <p id="rgb" class="btn">RGB</p>
-            <p id="grey-scale" class="btn">Grey-Scale</p>
+        <div id="btn-container">
+            <p class="rgb-btn btn" onclick="colorSelector('rgb')">RGB</p> 
+            <p class="default-btn btn" onclick="colorSelector('default')">Default</p>
+            <p class="eraser-btn btn" onclick="colorSelector('eraser')">Eraser</p>
+            <p class="clear-btn btn" onclick="clearGrid()">Clear</p> 
         </div>
+        
     </div>
     <script src="./app.js"></script>
 </body>
