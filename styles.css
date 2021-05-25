@@ -1,46 +1,46 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;   
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #container-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid {
-    display: grid;
-    width: 800px;
-    height: 800px;
-    padding-top: 50px;
+  display: grid;
+  width: 800px;
+  height: 800px;
+  padding-top: 50px;
 
-    /* Remove this when you're ready to deal with the flex control */
-    margin: auto; 
+  /* Remove this when you're ready to deal with the flex control */
+  margin: auto;
 }
 
 .grid-item {
-    border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .btn {
-    padding: 20px 50px;
-    background-color: tomato;
-    display: inline-block;
+  padding: 20px 50px;
+  background-color: yellow;
+  display: inline-block;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #btn-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
-    padding-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 50px;
 }
 
 .btn:hover {
-    background-color: lightgreen;
+  background-color: lightgreen;
 }
