@@ -8,3 +8,7 @@ I'm updating this several months later after cleaning up my files, regardless, I
 
 Looking back at this project, I defiently would have designed the page better, it's bland and without much work could be easily improved!
 
+#### Tools Used
+  - JavaScript,
+  - HTML,
+  - CSS
