@@ -52,7 +52,7 @@ body {
   display: grid;
 }
 
-.grid-item-border {
+.grid-item {
   border: 1px solid #222;
 }
 
@@ -126,6 +126,7 @@ h1 {
   place-items: center;
   margin-top: 25px;
   gap: 25px;
+  cursor: pointer;
 }
 
 .option-btn {

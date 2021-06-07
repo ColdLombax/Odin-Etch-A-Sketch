@@ -20,19 +20,19 @@
         <div id="settings-info">
             <div id="info-list">
                 <h3>Information</h3>
-                <p>Etch it man</p>
+                <p>A few shortcuts...</p>
                     <ul>
                         <li>
-                            <p><span class="option-accent">CTRL + O </span>- Options</p>
+                            <p><span class="option-accent">O </span>- Options</p>
                         </li>
                         <li>
-                            <p><span class="option-accent">CTRL + E </span>- Delete Tool</p>
+                            <p><span class="option-accent">E </span>- Delete Tool</p>
                         </li>
                         <li>
-                            <p><span class="option-accent">CTRL + P </span>- Pen Tool</p>
+                            <p><span class="option-accent">P </span>- Pen Tool</p>
                         </li>
                         <li>
-                            <p><span class="option-accent">CTRL + T </span>- Toggle Pen</p>
+                            <p><span class="option-accent">T </span>- Toggle Pen</p>
                         </li>
                     </ul>
                 </div>
@@ -43,17 +43,17 @@
             <h3>Configuration</h3>
             <div class="sliders">
                 <label for="box-size">Grid Size</label>
-                <input id="box-size" type="range" min="4" max="64" value="32">
+                <input id="box-size" type="range" min="4" max="64" value="32" onchange="renderGrid(value)">
             </div>
             <div class="buttons">
-                <p class="option-btn">GREY-SCALE</p>
-                <p class="option-btn">RGB</p>
-                <p class="option-btn">DISABLE GRID</p>
+                <p id="grey" class="option-btn btn-active" onclick="toggleButton('grey')">GREY</p>
+                <p id="rgb" class="option-btn" onclick="toggleButton('rgb')">RGB</p>
+                <p id="disable-grid" class="option-btn" onclick="toggleButton('grid')">DISABLE GRID</p>
             </div>
         </form>
         <div style="display: flex; margin-top: 5%; gap: 20px">
             <p class="save btn" onclick="toggleModal()">BACK</p>
-            <p class="delete btn">DELETE</p>
+            <p class="delete btn" onclick="renderGrid()">DELETE</p>
         </div>
     </section>
     <header id="setting-wrapper">
