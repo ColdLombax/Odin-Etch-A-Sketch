@@ -46,14 +46,14 @@
                 <input id="box-size" type="range" min="4" max="64" value="32" onchange="renderGrid(value)">
             </div>
             <div class="buttons">
-                <p id="grey" class="option-btn btn-active" onclick="toggleButton('grey')">GREY</p>
+                <p id="grey" class="option-btn" onclick="toggleButton('grey')">GREY</p>
                 <p id="rgb" class="option-btn" onclick="toggleButton('rgb')">RGB</p>
                 <p id="disable-grid" class="option-btn" onclick="toggleButton('grid')">DISABLE GRID</p>
             </div>
         </form>
         <div style="display: flex; margin-top: 5%; gap: 20px">
             <p class="save btn" onclick="toggleModal()">BACK</p>
-            <p class="delete btn" onclick="renderGrid()">DELETE</p>
+            <p class="delete btn" onclick="renderGrid(32)">DELETE</p>
         </div>
     </section>
     <header id="setting-wrapper">
