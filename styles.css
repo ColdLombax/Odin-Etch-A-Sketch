@@ -1,46 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-#container-wrapper {
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(15, 15, 15, 0.8)),
+    url(https://images.unsplash.com/photo-1579547621113-e4bb2a19bdd6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2092&q=80);
+  background-size: cover;
+  background-color: whitesmoke;
+
+  color: white;
+  font-family: "Roboto Mono", monospace;
+}
+
+#bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: -1;
+}
+
+#grid-wrapper {
+  width: 90%;
+
+  display: grid;
+  place-items: center;
+
+  position: relative;
+}
+
+#grid-container {
+  width: 90%;
+  max-width: 900px;
+  height: 85vh;
+  border: 5px solid white;
 }
 
 .grid {
   display: grid;
-  width: 800px;
-  height: 800px;
-  padding-top: 50px;
-
-  /* Remove this when you're ready to deal with the flex control */
-  margin: auto;
 }
 
-.grid-item {
-  border: 1px solid rgb(0, 0, 0);
+.grid-item-border {
+  border: 1px solid #222;
+}
+
+#setting-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+
+  font-size: 1.2rem;
+  width: 90%;
+  max-width: 900px;
+}
+
+h1 {
+  text-align: center;
+  margin-right: auto;
+}
+
+.cog:hover {
+  cursor: pointer;
+  color: lightblue;
+}
+
+#modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.8);
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+#modal h3 {
+  margin-top: 20vh;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#modal ul {
+  list-style: none;
+  text-align: left;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+#settings-info,
+#settings-form {
+  width: 50%;
+}
+
+#info-list {
+  text-align: left;
+}
+
+#settings-form h3 {
+  margin-top: 10vh;
+}
+
+.sliders {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  margin-top: 25px;
+  gap: 25px;
+}
+
+.option-btn {
+  padding: 15px;
+  border: 2px solid white;
+  width: 200px;
+  text-align: center;
+}
+
+.btn-active {
+  background-color: rgb(255, 115, 115);
+}
+
+.active {
+  display: block;
+}
+
+.inactive {
+  display: none;
+}
+
+.sliders label {
+  margin-bottom: 10px;
 }
 
 .btn {
-  padding: 20px 50px;
-  background-color: yellow;
-  display: inline-block;
-
+  margin-top: 5%;
+  padding: 15px 30px;
+  border: 2px solid white;
   cursor: pointer;
 }
 
-#btn-container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 100%;
-  padding-top: 50px;
+.btn:hover {
+  border-color: lightblue;
 }
 
-.btn:hover {
-  background-color: lightgreen;
+.delete {
+  border-color: tomato;
+}
+
+@media screen and (max-width: 1024px) {
+  #setting-wrapper {
+    display: none;
+  }
+
+  #modal {
+    display: none;
+  }
+
+  #grid-container {
+    display: none;
+  }
+
+  #mobile-error {
+    display: block;
+
+    width: 100vw;
+    height: 100vh;
+
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
+
+  #mobile-error span {
+    color: tomato;
+    font-size: 3em;
+    line-height: 10rem;
+  }
 }
