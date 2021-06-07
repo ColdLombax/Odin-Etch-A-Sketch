@@ -1,24 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Etch-a-sketch</title>
-</head>
-<body>
-    <div id="container-wrapper">
-        <div id="grid-container" class="grid"></div>
-        <div id="btn-container">
-            <p class="rgb-btn btn" onclick="colorSelector('rgb')">RGB</p> 
-            <p class="default-btn btn" onclick="colorSelector('default')">Default</p>
-            <p class="eraser-btn btn" onclick="colorSelector('eraser')">Eraser</p>
-            <p class="clear-btn btn" onclick="clearGrid()">Clear</p> 
+  </head>
+  <body>
+    <section id="mobile-error" class="inactive">
+      <h2><span>ERROR!</span></br>SWITCH TO A LARGER SCREEN SIZE TO PLAY</h2>
+    </section>
+    <section id="modal">
+        <div id="settings-info">
+            <div id="info-list">
+                <h3>Information</h3>
+                <p>Etch it man</p>
+                    <ul>
+                        <li>
+                            <p><span class="option-accent">CTRL + O </span>- Options</p>
+                        </li>
+                        <li>
+                            <p><span class="option-accent">CTRL + E </span>- Delete Tool</p>
+                        </li>
+                        <li>
+                            <p><span class="option-accent">CTRL + P </span>- Pen Tool</p>
+                        </li>
+                        <li>
+                            <p><span class="option-accent">CTRL + T </span>- Toggle Pen</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         
-    </div>
+        <form id="settings-form">
+            <h3>Configuration</h3>
+            <div class="sliders">
+                <label for="box-size">Grid Size</label>
+                <input id="box-size" type="range" min="4" max="64" value="32">
+            </div>
+            <div class="buttons">
+                <p class="option-btn">GREY-SCALE</p>
+                <p class="option-btn">RGB</p>
+                <p class="option-btn">DISABLE GRID</p>
+            </div>
+        </form>
+        <div style="display: flex; margin-top: 5%; gap: 20px">
+            <p class="save btn" onclick="toggleModal()">BACK</p>
+            <p class="delete btn">DELETE</p>
+        </div>
+    </section>
+    <header id="setting-wrapper">
+      <h1>Etch-A-Sketch</h1>
+      <span class="material-icons md-48 cog" onclick="toggleModal()">settings</span>
+    </header>
+    <div id="grid-container" class="grid"></div>
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>
