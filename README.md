@@ -15,8 +15,7 @@ A classic, grid based drawing program, following a few guidelines, This was rece
   <img src="https://img.shields.io/badge/DEMO-lightgreen?label=Etch-A-Sketch&style=for-the-badge&logo=javascript">
 </a>
 <div>
-  <img src="https://user-images.githubusercontent.com/73673516/122131691-75ccaf80-ce31-11eb-8ce1-53dcc76bb3c1.png" width=320>
-  <img src="https://user-images.githubusercontent.com/73673516/122131780-9ac12280-ce31-11eb-883d-f7900eeb54a7.png" width=320>
+  <img src="https://user-images.githubusercontent.com/73673516/122206499-58cbc700-ce99-11eb-8068-361183040477.png" width=640>
 </div>
 
 ## Tools Used
